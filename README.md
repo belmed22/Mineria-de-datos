@@ -31,14 +31,14 @@ Este formato le permite agrupar bloques de código con lógica común, ver su sa
 ### Calculations
 Comencemos con la sintaxis básica para los cálculos matemáticos en R. R realiza sumas, restas, multiplicaciones y divisiones con +, -, * y /:
 
-`#Results in "500"
+` #Results in "500"
 573 - 74 + 1
 
 #Results in "50"
 25 * 2
 
 #Results in "2"
-10 / 5`
+10 / 5 `
 
 Las operaciones matemáticas en R siguen el orden matemático estándar de operaciones.
 
@@ -46,7 +46,7 @@ Las operaciones matemáticas en R siguen el orden matemático estándar de opera
 
 R interpreta cualquier cosa en una línea después de un símbolo # como un comentario.
 
-#this is a comment
+` #this is a comment`
 
 Los comentarios se pueden usar para agregar texto en el programa que NO se ejecutará. 
 Son útiles para proporcionar contexto, sugerencias para usted u otras personas que trabajan en el código, o incluso para deshacerse temporalmente de una línea al depurar.
