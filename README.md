@@ -31,17 +31,14 @@ Este formato le permite agrupar bloques de código con lógica común, ver su sa
 ### Calculations
 Comencemos con la sintaxis básica para los cálculos matemáticos en R. R realiza sumas, restas, multiplicaciones y divisiones con +, -, * y /:
 
-#Results in "500"
-
+`#Results in "500"
 573 - 74 + 1
 
 #Results in "50"
-
 25 * 2
 
 #Results in "2"
-
-10 / 5
+10 / 5`
 
 Las operaciones matemáticas en R siguen el orden matemático estándar de operaciones.
 
@@ -58,15 +55,11 @@ Son útiles para proporcionar contexto, sugerencias para usted u otras personas 
 
 En R, y en la programación en general, los tipos de datos son las clasificaciones que damos a los diferentes tipos de piezas de información.
 
-class(2) # numeric
-
+`class(2) # numeric
 class('hello') # character
-
 class('23') #character
-
 class (FALSE) #logical
-
-class(NA) #logical
+class(NA) #logical`
 
 Específicamente, R proporciona los siguientes tipos de datos básicos: carácter, numérico, entero, lógico y complejo. Cada tipo de datos se utiliza para representar algún tipo de información: números, cadenas, valores booleanos, etc.
 
@@ -74,7 +67,7 @@ Específicamente, R proporciona los siguientes tipos de datos básicos: carácte
 
 En programación, las variables nos permiten almacenar información y asociar esa información con un nombre. En R, asignamos variables usando el operador de asignación, un signo de flecha (<-) hecho con un quilate y un guión.
 
-full_name <-"Natalia Rodríguez Nuñez"
+`full_name <-"Natalia Rodríguez Nuñez"`
 
 En el ejemplo anterior, almacenamos el valor de cadena 'Natalia Rodríguez Nuñez' en una variable llamada full_name. Las variables no pueden tener espacios o símbolos en sus nombres que no sean guiones bajos (_). No pueden comenzar con números, pero pueden tener números después de la primera letra.
 
@@ -82,7 +75,7 @@ En el ejemplo anterior, almacenamos el valor de cadena 'Natalia Rodríguez Nuñe
 
 En R, los vectores son una estructura similar a una lista que contiene elementos del mismo tipo de datos.
 
-spring_months <- c("March", "April","May","June")
+`spring_months <- c("March", "April","May","June")`
 
 En el ejemplo anterior, creamos una nueva variable con el valor de un nuevo vector. Creamos este vector separando cuatro cadenas de caracteres con una coma y envolviendolas dentro de c ().
 
@@ -98,9 +91,9 @@ Puede acceder a elementos individuales en el vector usando [] y colocando la pos
 
 En R, una declaración condicional va entre paréntesis y es seguida por un conjunto de llaves que contienen el código que se ejecutará.
 
-if (TRUE) {
+`if (TRUE) {
   print('This message will print!')
-}
+}`
 
 En una declaración if, si el condicional es True, se ejecuta el código dentro de las llaves.
 
@@ -110,7 +103,7 @@ En una declaración if, si el condicional es True, se ejecuta el código dentro 
 Al escribir declaraciones condicionales, a veces necesitamos usar diferentes tipos de operadores para comparar valores. Estos operadores se llaman operadores de comparación.
 Los operadores de comparación comparan el valor de la izquierda con el valor de la derecha. Por ejemplo:
 
-10 < 12 # Evaluates to TRUE
+`10 < 12 # Evaluates to TRUE`
 
 Puede ser útil pensar en las declaraciones de comparación como preguntas. Cuando la respuesta es 'sí', la declaración se evalúa como verdadera, y cuando la respuesta es 'no', la declaración se evalúa como falsa. El código anterior sería preguntar: ¿10 es menos de 12? ¡Si! Entonces 10 <12 se evalúa como verdadero.
 
@@ -140,11 +133,11 @@ Un paquete es un paquete de código que facilita la codificación de ciertas tar
 
 Base R es muy potente, pero la mayoría de las veces, querrás importar un paquete para hacerte la vida más fácil. Solo necesita ejecutar este comando la primera vez que instala un paquete, después de eso no hay necesidad de ejecutarlo:
 
-install.packages('package-name')
+`install.packages('package-name')`
 
 Para importar un paquete simplemente:
 
-library(package-name)
+`library(package-name)`
 
 Puede buscar documentación para diferentes paquetes disponibles en R en la CRAN (Red Integral de Archivo R).
 
@@ -177,21 +170,19 @@ Exportado desde SQL
 
 La primera fila de un CSV contiene encabezados de columna. Todas las filas posteriores contienen valores. Cada encabezado de columna y cada variable está separada por una coma:
 
-column1,column2,column3
-
+`column1,column2,column3
 value1,value2,value3
-
-value4,value5,value6
+value4,value5,value6`
 
 ### Loading and Saving CSVs
 
 Cuando tiene datos en un CSV, puede cargarlos en un marco de datos en R usando la función readr‘s read_csv ():
 
-df <- read_csv('my_csv_file.csv')
+`df <- read_csv('my_csv_file.csv')`
 
 También puede guardar datos de un marco de datos en un CSV utilizando la función readr‘s write_csv ():
 
-write_csv(df,'new_csv_file.csv')
+`write_csv(df,'new_csv_file.csv')`
 
 ### Inspecting Data Frames
 
@@ -209,18 +200,18 @@ Uno de los aspectos más atractivos de dplyr es la capacidad de manipular fácil
 
 El operador de canalización, o %>%, ayuda a aumentar la legibilidad del código del marco de datos al canalizar el valor a su izquierda en el primer argumento de la función que le sigue. Por ejemplo:
 
-df %>%
-  head()
+`df %>%
+  head()`
 
 Canaliza el marco de datos df en el primer argumento de head (), convirtiéndose
 
-head(df)
+`head(df)`
 
 ### Selecting Columns
 
 Puede seleccionar las columnas apropiadas para su análisis utilizando la función select () de dplyr‘s:
 
-select(customers,age,gender)
+`select(customers,age,gender)`
 
 
 Select () toma un marco de datos como primer argumento
@@ -231,15 +222,15 @@ Select () devuelve un nuevo marco de datos que contiene solo las columnas desead
 
 Pero, ¿qué pasa con la tubería%>%, preguntas? Gran pregunta Puede simplificar la legibilidad de su código utilizando la tubería:
 
-customers %>%
-  select(age,gender)
+`customers %>%
+  select(age,gender)`
 
 ### Excluding Columns
 
 A veces, en lugar de especificar qué columnas desea seleccionar de un marco de datos, es más fácil establecer qué columnas no desea seleccionar. 
 
-customers %>%
-  select(-name,-phone)
+`customers %>%
+  select(-name,-phone)`
 
 Los clientes del marco de datos se canalizan a select ().
 
@@ -253,14 +244,14 @@ Además de subconjugar un marco de datos por columnas, también puede subconjunt
 
 upongamos que desea encontrar todos los pedidos realizados por clientes con el primer nombre 'Joyce'.
 
-orders %>%
-  filter(first_name == 'Joyce')
+`orders %>%
+  filter(first_name == 'Joyce')`
 
 
 ¿Qué pasa si tiene múltiples condiciones que desea que se cumplan? ¡No es un problema! Para encontrar todos los pedidos hechos de piel sintética Y que cuestan más de 25:
 
-orders %>%
-  filter(shoe_material == 'faux-leather',price > 25)
+`orders %>%
+  filter(shoe_material == 'faux-leather',price > 25)`
 
 
 Puede proporcionar cualquier cantidad de condiciones que desee, siempre que separe cada condición con una coma como argumento propio.
@@ -271,13 +262,13 @@ La función filter () también permite un filtrado más complejo con la ayuda de
 
 Está interesado en ver todos los pedidos que fueron para ‘clogs’ O que costaron menos de 20. Usando el operador o (|):
 
-orders %>%
-  filter(shoe_type == 'clogs' | price < 20)
+`orders %>%
+  filter(shoe_type == 'clogs' | price < 20)`
 
 ¿Qué sucede si desea encontrar todos los pedidos donde se compraron zapatos de cualquier color que no sea rojo? Usando el operador not or bang (!):
 
-orders %>%
-  filter(!(shoe_color == red))
+`orders %>%
+  filter(!(shoe_color == red))`
 
 ### Arranging Rows
 
@@ -287,13 +278,13 @@ Para columnas numéricas, orden ascendente significa de números más bajos a m�
 
 Para organizar a los clientes en orden ascendente por nombre:
 
-customers %>%
-  arrange(name)
+`customers %>%
+  arrange(name)`
 
 arrange() también puede ordenar filas por orden descendente! Para organizar a los clientes en orden descendente por edad:
 
-customers %>%
-  arrange(desc(age))
+`customers %>%
+  arrange(desc(age))`
 
 Si se proporcionan múltiples argumentos para arrange(), ordenará las filas por la columna dada como primer argumento y usará las columnas adicionales para romper los lazos en los valores de las columnas anteriores.
 
@@ -309,8 +300,8 @@ Puede agregar una nueva columna al marco de datos utilizando la función mutate 
 
 Tal vez desee agregar una columna a su tabla de inventario con el monto del impuesto sobre las ventas que se cobra por cada artículo. El siguiente código multiplica cada precio por 0.075, el impuesto a las ventas en su estado:
 
-df %>%
-  mutate(sales_tax = price * 0.075)
+`df %>%
+  mutate(sales_tax = price * 0.075)`
 
 Ahora la tabla de inventario tiene una columna llamada sales_tax, donde el valor es 0.075 * precio.
 
@@ -318,9 +309,9 @@ Ahora la tabla de inventario tiene una columna llamada sales_tax, donde el valor
 
 mutate () puede tomar múltiples argumentos para agregar cualquier número de columnas nuevas a un marco de datos:
 
-df %>%
+`df %>%
   mutate(profit = price - cost_to_manufacture,
-         in_stock = TRUE)
+         in_stock = TRUE)`
 
 ### Transmute Columns
 
@@ -330,9 +321,9 @@ Al igual que mutate (), transmute () toma pares nombre-valor como argumentos. Lo
 
 Para agregar columnas de sales_tax y ganancias mientras se eliminan todas las demás columnas del marco de datos:
 
-df %>%
+`df %>%
   transmute(sales_tax = price * 0.075,
-            profit = price - cost_to_manufacture)
+            profit = price - cost_to_manufacture)`
 
 ### Rename Columns
 
@@ -342,9 +333,9 @@ rename () puede tomar cualquier número de argumentos, donde cada nuevo nombre d
 
 Para actualizar la columna del nombre a book_title y la columna written_by al autor:
 
-df %>%
+`df %>%
   rename(book_title = name,
-         author = written_by)
+         author = written_by)`
 
 Puede confirmar que los nombres de las columnas se han actualizado utilizando cualquiera de los nombres de las funciones base R () o colnames (), que toman un marco de datos como argumento y devuelve un vector que contiene los nombres de las columnas.
 
@@ -372,9 +363,9 @@ Supongamos que tiene una tonelada de archivos siguiendo la estructura del nombre
 
 Puede combinar las funciones de base R list.files () y lapply () con readr y dplyr para organizar mejor estos datos, como se muestra a continuación:
 
-files <- list.files(pattern = "file_.*csv")
+`files <- list.files(pattern = "file_.*csv")
 df_list <- lapply(files,read_csv)
-df <- bind_rows(df_list)
+df <- bind_rows(df_list)`
 
 La primera línea usa list.files () y una expresión regular, una secuencia de caracteres que describe un patrón de texto que debe coincidir, para encontrar cualquier archivo en el directorio actual que comience con 'file_' y tenga una extensión de csv, almacenando el nombre de cada archivo en un archivo vectorial
 
@@ -392,8 +383,8 @@ Cada fila como una observación separada
 
 Podemos usar la función de gather() de tidyr para hacer esta transformación. gather () toma un marco de datos y las columnas para descomprimir:
 
-df %>%
-  gather('Checking','Savings',key='Account Type',value='Amount')
+`df %>%
+  gather('Checking','Savings',key='Account Type',value='Amount')`
 
 ### Dealing with Duplicates
 
@@ -411,7 +402,7 @@ Supongamos que tenemos una columna 'cumpleaños' con datos formateados en format
 
 En este caso, conocemos la estructura exacta de estas cadenas. Los primeros dos caracteres siempre corresponderán al mes, los segundos dos al día, y el resto de la cadena siempre corresponderá al año. Podemos dividir fácilmente los datos en tres columnas separadas dividiendo las cadenas en subcadenas usando str_sub (), una función útil del paquete stringr:
 
-#Create the 'month' column
+`#Create the 'month' column
 df %>%
   mutate(month = str_sub(birthday,1,2))
 
@@ -421,7 +412,7 @@ df %>%
 
 #Create the 'year' column
 df %>%
-  mutate(year = str_sub(birthday,5))
+  mutate(year = str_sub(birthday,5))`
 
 El primer comando toma los caracteres que comienzan en el índice 1 y terminan en el índice 2 de cada valor en la columna de cumpleaños y lo coloca en una columna de mes.
 
@@ -433,8 +424,8 @@ El tercer comando toma los caracteres que comienzan en el índice 5 y terminan a
 
 Por lo tanto, podemos usar la función tidyr separate () para dividir esta columna en dos columnas separadas:
 
-df %>%
-  separate(type,c('user_type','country'),'_')
+`df %>%
+  separate(type,c('user_type','country'),'_')`
 
 typees la columna para dividir
 
@@ -479,9 +470,8 @@ Como mencionamos, en esencia, una visualización de ggplot es una combinación d
 
 Aquí invocamos ggplot () para crear un objeto ggplot y asignar el marco de datos df, guardándolo dentro de una variable llamada viz:
 
-viz <- ggplot(data=df)
-
-viz
+`viz <- ggplot(data=df)
+viz`
 
 ### Associating the Data
 
@@ -511,14 +501,14 @@ En ggplot, hay muchos tipos de geoms para representar diferentes relaciones en l
 
 El siguiente código agrega una capa de diagrama de dispersión a la visualización:
 
-viz <- ggplot(data=df, aes(x=col1,y=col2)) +
-       geom_point()
+`viz <- ggplot(data=df, aes(x=col1,y=col2)) +
+       geom_point()`
 
 Otra capa popular que le permite observar patrones en los datos completando una línea de mejor ajuste es la capa geom_smooth (). Esta capa, por naturaleza, viene con una banda de error gris. Puede agregar una capa suave al gráfico escribiendo lo siguiente:
 
-viz <- ggplot(data=df, aes(x=col1,y=col2)) +
+`viz <- ggplot(data=df, aes(x=col1,y=col2)) +
        geom_point() + 
-       geom_smooth()
+       geom_smooth()`
 
 ### Geom Aesthetics
 
@@ -526,9 +516,9 @@ En los ejercicios anteriores, agregamos geoms a la trama y exploramos la idea de
 
 Exploremos las asignaciones estéticas para la capa geom_point (). ¿Qué pasaría si quisiéramos codificar por color los puntos en el diagrama de dispersión en función de una propiedad? Es posible personalizar el color pasando un mapeo estético aes () con el color basado en una propiedad basada en datos. Observe este ejemplo:
 
-viz <- ggplot(data=airquality, aes(x=Ozone, y=Temp)) +
+`viz <- ggplot(data=airquality, aes(x=Ozone, y=Temp)) +
        geom_point(aes(color=Month)) + 
-       geom_smooth()
+       geom_smooth()`
 
 El código anterior solo cambiaría el color de la capa de puntos, no afectaría el color de la capa suave ya que el mapeo estético aes () se pasa en la capa de puntos.
 
@@ -536,8 +526,8 @@ El código anterior solo cambiaría el color de la capa de puntos, no afectaría
 
 Si tiene en mente un valor predeterminado, proporcione un parámetro estético con nombre y el valor de esa propiedad sin envolverlo en un aes (). Por ejemplo, si desea que todos los puntos de la capa del diagrama de dispersión sean de color rojo oscuro porque está en línea con la marca de la visualización que está preparando, simplemente puede pasar un parámetro de color con un valor manual oscuro o cualquier valor de color como entonces:
 
-viz <- ggplot(data=airquality, aes(x=Ozone, y=Temp)) +
-       geom_point(color="darkred") 
+`viz <- ggplot(data=airquality, aes(x=Ozone, y=Temp)) +
+       geom_point(color="darkred")` 
 
 Tenga en cuenta que no ajustamos el argumento de color dentro de aes () porque estamos configurando manualmente esa estética. Aquí hay más estética para la capa geom_point (): x, y, alfa, color, relleno, grupo, forma, tamaño, trazo. La estética alfa describe la opacidad de los puntos, y la forma de los puntos podría ser diferente a un punto. Lea más sobre los valores que toma cada una de estas estéticas en la documentación de la capa geom_point ().
 
@@ -549,10 +539,10 @@ Si desea personalizar sus etiquetas, puede agregar una llamada a la función lab
 
 La siguiente llamada a la función labs () y estos argumentos especificados generarían el siguiente diagrama:
 
-viz <- ggplot(df, aes(x=rent, y=size_sqft)) + 
+`viz <- ggplot(df, aes(x=rent, y=size_sqft)) + 
        geom_point() +
        labs(title="Monthly Rent vs Apartment Size in Brooklyn, NY", subtitle="Data by StreetEasy (2017)", x="Monthly Rent ($)", y="Apartment Size (sq ft.)")
-viz
+viz`
 
 ### Extending The Grammar
 
@@ -564,9 +554,9 @@ La capa geom_bar () agrega un gráfico de barras al lienzo. Por lo general, al c
 
 El siguiente código asigna el recuento de cada categoría en la columna Idioma en un conjunto de datos de 100 libros populares a una longitud de barra y luego guarda la visualización como un archivo .png llamado 'bar-example.png':
 
-bar <- ggplot(books, aes(x=Language)) + geom_bar()
+`bar <- ggplot(books, aes(x=Language)) + geom_bar()
 bar
-ggsave("bar-example.png")
+ggsave("bar-example.png")`
 
 ## Learn R: Aggregates<a name="id5"></a>
 
@@ -582,8 +572,8 @@ En este ejercicio, aprenderá a combinar todos los valores de una columna para u
 
 La sintaxis general para estos cálculos es:
 
-df %>%
-  summarize(var_name = command(column_name))
+`df %>%
+  summarize(var_name = command(column_name))`
 
 df es el marco de datos con el que está trabajando
 
@@ -601,9 +591,9 @@ Cuando tenemos un montón de datos, a menudo queremos calcular estadísticas agr
 
 En general, usamos la siguiente sintaxis para calcular los agregados:
 
-df %>%
+`df %>%
   group_by(column_1) %>%
-  summarize(aggregate_name = command(column_2))
+  summarize(aggregate_name = command(column_2))`
 
 column_1 (alumno en nuestro ejemplo) es la columna que queremos agrupar_por ()
 
@@ -613,26 +603,26 @@ agregate_name es el nombre asignado al agregado calculado
 
 Además de las funciones de resumen discutidas en el último ejercicio (media (), mediana (), sd (), var (), min (), max (), IQR () y n_distinct ()), otra función de resumen útil, especialmente para datos agrupados, es n (). n () devolverá el recuento de las filas dentro de un grupo y no requiere una columna como argumento. Para obtener el recuento de las filas en cada grupo de estudiantes de nuestro ejemplo
 
-grades <- df %>%
+`grades <- df %>%
   group_by(student) %>%
-  summarize(count = n())
+  summarize(count = n())`
 
 
 ### Calculating Aggregate Functions II
 
 A veces, queremos agrupar por más de una columna. Podemos hacer esto pasando varios nombres de columna como argumentos a la función group_by.
 
-df %>%
+`df %>%
   group_by(location,day_of_week) %>%
-  summarize(mean_total_sales = mean(total_sales))
+  summarize(mean_total_sales = mean(total_sales))`
 
 ### Combining Grouping with Filter
 
 Si bien group_by () se usa con mayor frecuencia con summaryize () para calcular estadísticas de resumen, también se puede usar con el filtro de función dplyr () para filtrar filas de un marco de datos basado en métricas por grupo.
 
-enrollments %>%
+`enrollments %>%
   group_by(course) %>%
-  filter(mean(quiz_score) < 80)
+  filter(mean(quiz_score) < 80)`
 
 group_by () agrupa el marco de datos por curso en dos grupos: learn-r y learn-python
 
@@ -646,9 +636,9 @@ group_by () también se puede usar con la función dplyr mutate () para agregar 
 
 Desea agregar una nueva columna al marco de datos que almacena la diferencia entre el quiz_score de una fila y el quiz_score promedio para el curso de esa fila. Para agregar la columna:
 
-enrollments %>% 
+`enrollments %>% 
   group_by(course) %>% 
-  mutate(diff_from_course_mean = quiz_score - mean(quiz_score))
+  mutate(diff_from_course_mean = quiz_score - mean(quiz_score))`
 
 group_by () agrupa el marco de datos por curso en dos grupos: learn-r y learn-python
 
@@ -666,16 +656,16 @@ El método inner_join () busca columnas que son comunes entre dos marcos de dato
 
 Podemos llamar al método inner_join () con dos marcos de datos como este:
 
-joined_df <- orders %>%
-  inner_join(customers)
+`joined_df <- orders %>%
+  inner_join(customers)`
 
 ### Inner Join II
 
 Además de usar inner_join () para unir dos marcos de datos, podemos usar la tubería%>% para unir múltiples marcos de datos a la vez. El siguiente comando uniría pedidos con clientes y luego uniría el marco de datos resultante con productos
 
-big_df <- orders %>%
+`big_df <- orders %>%
   inner_join(customers) %>%
-  inner_join(products)
+  inner_join(products)`
 
 ### Join on Specific Columns I
 
@@ -689,17 +679,17 @@ Debido a que las columnas de identificación significarían algo diferente en ca
 
 Una forma de solucionar este problema es utilizar la función dplyr rename () para cambiar el nombre de las columnas de nuestras uniones. En el ejemplo a continuación, cambiaremos el nombre de la ID de la columna en el marco de datos de los clientes a customer_id, de modo que los pedidos y los clientes ahora tengan una columna común para unirse.
 
-customers <- customers %>%
+`customers <- customers %>%
   rename(customer_id = id)
-inner_join(orders, customers)
+inner_join(orders, customers)`
 
 ### Join on Specific Columns II
 
 Podemos agregar el argumento by al llamar a inner_join () para especificar en qué columnas queremos unirnos. En el ejemplo a continuación, la tabla 'izquierda' es la que viene primero (pedidos), y la tabla 'derecha' es la que viene después (clientes). Esta sintaxis dice que deberíamos hacer coincidir el customer_id de los pedidos con el id en los clientes.
 
-orders %>% 
+`orders %>% 
   inner_join(customers,
-             by = c('customer_id' = 'id'))
+             by = c('customer_id' = 'id'))`
 
 Si usamos esta sintaxis, terminaremos con dos columnas llamadas id, una de la primera tabla y otra de la segunda. R no le permitirá tener dos columnas con el mismo nombre, por lo que las cambiará a id_x e id_y.
 
@@ -707,10 +697,10 @@ Los nuevos nombres de columna id_x e id_y no son muy útiles para nosotros cuand
 
 Por ejemplo, podríamos usar el siguiente código para hacer que los sufijos reflejen los nombres de las tablas:
 
-orders %>% 
+`orders %>% 
   inner_join(customers,
              by = c('customer_id' = 'id'),
-             suffix = c('_order','_customer'))
+             suffix = c('_order','_customer'))`
 
 ### Full Join
 
@@ -720,8 +710,8 @@ Suponga que dos compañías, la Compañía A y la Compañía B acaban de fusiona
 
 Si quisiéramos combinar los datos de ambas compañías sin perder a los clientes que faltan en una de las tablas, podríamos usar una unión completa. Una unión completa incluiría todas las filas de ambas tablas, incluso si no coinciden. Cualquier valor faltante se completa con NA.
 
-full_joined_dfs <- company_a %>%
-  full_join(company_b)
+`full_joined_dfs <- company_a %>%
+  full_join(company_b)`
 
 ### Left and Right Joins
 
@@ -733,15 +723,15 @@ Para este comando, el orden de los argumentos es importante. Si el primer marco 
 
 Al enumerar la compañía_a primero, obtenemos todos los clientes de la Compañía A, y solo los clientes de la Compañía B que también son clientes de la Compañía A.
 
-left_joined_df <- company_a %>%
-  left_join(company_b)
+`left_joined_df <- company_a %>%
+  left_join(company_b)`
 
 Una unión derecha es exactamente lo contrario de la unión izquierda. Aquí, la tabla unida incluirá todas las filas de la segunda tabla (derecha), pero solo las filas de la primera tabla (izquierda) que coincidan con la segunda tabla.
 
 Al enumerar company_a first y company_b second, obtenemos todos los clientes de la empresa B, y solo los clientes de la empresa A que también son clientes de la empresa B.
 
-right_joined_df <- company_a %>%
-  right_join(company_b)
+`right_joined_df <- company_a %>%
+  right_join(company_b)`
 
 ### Concatenate Data Frames
 
@@ -749,8 +739,8 @@ A veces, un conjunto de datos se divide en varias tablas. Por ejemplo, los datos
 
 Si queremos combinar estos dos marcos de datos, podemos usar el siguiente comando:
 
-concatenated_dfs <- df1 %>%
-  bind_rows(df_2)
+`concatenated_dfs <- df1 %>%
+  bind_rows(df_2)`
 
 ## Learn R: Mean, Median, and Mode<a name="id7"></a>
 
@@ -769,11 +759,9 @@ Si bien ha demostrado que puede calcular el promedio usted mismo, lleva mucho ti
 
 La función R mean () puede hacer el trabajo de sumar y dividir por usted. En el siguiente ejemplo, usamos mean () para calcular el promedio de un conjunto de datos con diez valores:
 
-example_data <- c(24, 16, 30, 10, 12, 28, 38, 2, 4, 36)
-
+`example_data <- c(24, 16, 30, 10, 12, 28, 38, 2, 4, 36)
 example_average <- mean(example_data)
-
-print(example_average)
+print(example_average)`
 
 ### Median
 
@@ -789,11 +777,9 @@ Encontrar la mediana de un conjunto de datos se vuelve cada vez más lento a med
 
 La función R mediana () puede hacer el trabajo de clasificación y luego encontrar la mediana por usted. En el siguiente ejemplo, usamos mediana () para calcular la mediana de un conjunto de datos con diez valores:
 
-example_data = c(24, 16, 30, 10, 12, 28, 38, 2, 4, 36, 42)
-
+`example_data = c(24, 16, 30, 10, 12, 28, 38, 2, 4, 36, 42)
 example_median = median(example_data)
-
-print(example_median)
+print(example_median)`
 
 ### Mode
 
@@ -814,9 +800,8 @@ El paquete R DescTools incluye una práctica función Mode () que puede hacer el
 
 library(DescTools)
 
-example_data <- c(24, 16, 12, 10, 12, 28, 38, 12, 28, 24)
-
-example_mode <- Mode(example_data)
+`example_data <- c(24, 16, 12, 10, 12, 28, 38, 12, 28, 24)
+example_mode <- Mode(example_data)`
 
 
 ## Learn R: Variance and Standard Deviation<a name="id8"></a>
@@ -837,8 +822,8 @@ Al calcular la varianza, si un punto de datos estaba por encima o por debajo de 
 
 Todo este trabajo se puede hacer rápidamente utilizando una función que proporcionamos. La función varianza () toma una lista de números como parámetro y devuelve la varianza de ese conjunto de datos.
 
-dataset <- c(3, 5, -2, 49, 10)
-var <- variance(dataset)
+`dataset <- c(3, 5, -2, 49, 10)
+var <- variance(dataset)`
 
 ### Standard Deviation
 
@@ -854,8 +839,8 @@ La desviación estándar se calcula tomando la raíz cuadrada de la varianza. si
 
 Hay una función R dedicada a encontrar la desviación estándar de un conjunto de datos: podemos cortar el paso de encontrar primero la varianza. La función R sd () toma un conjunto de datos como parámetro y devuelve la desviación estándar de ese conjunto de datos:
 
-dataset <- c(4, 8, 15, 16, 23, 42)
-standard_deviation <- sd()
+`dataset <- c(4, 8, 15, 16, 23, 42)
+standard_deviation <- sd()`
 
 ### Using Standard Deviation
 
@@ -909,8 +894,8 @@ La función base R que usaremos se llama quantile (). Puede obtener más informa
 
 El siguiente código calcula el tercer cuartil del conjunto de datos dado:
 
-dataset <- c(50, 10, 4, -3, 4, -20, 2)
-third_quartile <- quantile(dataset, 0.75)
+`dataset <- c(50, 10, 4, -3, 4, -20, 2)
+third_quartile <- quantile(dataset, 0.75)`
 
 La función cuantil () toma dos parámetros. El primero es el conjunto de datos que le interesa. El segundo es un número entre 0 y 1. Como calculamos el tercer cuartil, utilizamos 0,75; queremos el punto que divide el primer 75% de los datos del resto.
 
@@ -938,8 +923,8 @@ cuantile () toma dos parámetros. El primero es el conjunto de datos que está u
 
 Por ejemplo, si solo desea el valor que divide el primer 10% de los datos, aparte del 90% restante, puede usar este código:
 
-dataset <- c(5, 10, -20, 42, -9, 10)
-ten_percent <- quantile(dataset, 0.10)
+`dataset <- c(5, 10, -20, 42, -9, 10)
+ten_percent <- quantile(dataset, 0.10)`
 
 ten_percent ahora tiene el valor -14.5. Este resultado técnicamente no es un cuantil, porque no está dividiendo el conjunto de datos en grupos de igual tamaño: este valor divide los datos en un grupo con el 10% de los datos y otro con el 90%.
 
@@ -951,8 +936,8 @@ En el último ejercicio, encontramos un solo 'cuantil': separamos el primer 23% 
 
 Sin embargo, los cuantiles suelen ser un conjunto de valores que dividen los datos en grupos de igual tamaño. Por ejemplo, si desea obtener los 5 cuantiles, o los cuatro valores que dividen los datos en cinco grupos de igual tamaño, puede usar este código:
 
-dataset <- c(5, 10, -20, 42, -9, 10)
-ten_percent <- quantile(dataset, c(0.2, 0.4, 0.6, 0.8))
+`dataset <- c(5, 10, -20, 42, -9, 10)
+ten_percent <- quantile(dataset, c(0.2, 0.4, 0.6, 0.8))`
 
 
 Tenga en cuenta que tuvimos que hacer un poco de cálculo mental para asegurarnos de que los valores c (0.2, 0.4, 0.6, 0.8) dividen los datos en grupos de igual tamaño. Cada grupo tiene el 20% de los datos.
@@ -985,8 +970,8 @@ En el último ejercicio, calculamos el IQR al encontrar los cuartiles usando R y
 
 La función IQR () toma un conjunto de datos como parámetro y devuelve el rango intercuartil.
 
-dataset = c(4, 10, 38, 85, 193)
-interquartile_range = IQR(dataset)
+`dataset = c(4, 10, 38, 85, 193)
+interquartile_range = IQR(dataset)`
 
 ## Learn R: Hypothesis Testing<a name="id10"></a>
 
@@ -1031,7 +1016,7 @@ Suponga que quiere saber si los estudiantes que estudian historia están más in
 
 Para probar esta hipótesis, debe diseñar un experimento y recopilar datos. Invitas a 100 estudiantes de historia y de química de tu universidad a unirte a un equipo de voleibol extracurricular. Después de una semana, se inscriben 34 estudiantes de historia (34%) y 39 estudiantes de química (39%). Se inscribieron más estudiantes de química que estudiantes de historia, pero ¿es esta una diferencia 'real' o significativa? ¿Puedes concluir que los estudiantes que estudian química están más interesados en el voleibol que los estudiantes que estudian historia?
 
-En su experimento, las 100 especialidades de historia y 100 de química en su universidad son muestras de sus respectivas poblaciones (todas las especialidades de historia y química). Las medias de la muestra son los porcentajes de carreras de historia (34%) y de química (39%) que se inscribieron en el equipo, y la diferencia en las medias de muestra es 39% - 34% \u003d 5%. Las medias de población son el porcentaje de estudiantes de historia y química en todo el mundo que se inscribirán en un equipo de voleibol extracurricular si se les da la oportunidad.
+En su experimento, las 100 especialidades de historia y 100 de química en su universidad son muestras de sus respectivas poblaciones (todas las especialidades de historia y química). Las medias de la muestra son los porcentajes de carreras de historia (34%) y de química (39%) que se inscribieron en el equipo, y la diferencia en las medias de muestra es 39% - 34% = 5%. Las medias de población son el porcentaje de estudiantes de historia y química en todo el mundo que se inscribirán en un equipo de voleibol extracurricular si se les da la oportunidad.
 
 Desea saber si la diferencia que observó en estas medias muestrales (5%) refleja una diferencia en las medias poblacionales, o si la diferencia fue causada por un error de muestreo, y las muestras de estudiantes que eligió no representan las mayores poblaciones de la historia y estudiantes de química.
 
@@ -1055,7 +1040,7 @@ Por ejemplo, con el experimento de estudiantes de historia y química, digamos q
 
 Para encontrar la intersección entre los vectores vec_a y vec_b:
 
-intersection <- intersect(vec_a,vec_b)
+`intersection <- intersect(vec_a,vec_b)`
 
 Los falsos positivos ocurren cuando el experimento indica un resultado positivo, pero los datos reales son negativos (la hipótesis nula se rechaza aunque sea cierta).
 
@@ -1085,7 +1070,7 @@ El primer paso es formular una hipótesis nula, que nuevamente es la hipótesis 
 
 t.test () requiere dos argumentos, una distribución de valores y una media esperada:
 
-results <- t.test(sample_distribution, mu = expected_mean)
+`results <- t.test(sample_distribution, mu = expected_mean)`
 
 sample_distribution es la muestra de valores que se recopilaron
 mu es un argumento que indica la media deseada de la población hipotética
@@ -1101,7 +1086,7 @@ La hipótesis nula, en este caso, es que las dos distribuciones tienen la misma 
 
 Puede usar la función t.test () de R para realizar una prueba T de dos muestras, como se muestra a continuación:
 
-results <- t.test(distribution_1, distribution_2)
+`results <- t.test(distribution_1, distribution_2)`
 
 Al realizar una prueba T de dos muestras, t.test () toma dos distribuciones como argumentos y devuelve, entre otra información, un valor p. Recuerde, el valor p le permite saber la probabilidad de que la diferencia en las medias ocurra por casualidad (error de muestreo).
 
@@ -1113,6 +1098,6 @@ Puede utilizar la función del paquete de estadísticas aov () para realizar ANO
 
 Luego puede ejecutar una prueba ANOVA con esta línea:
 
-results <- aov(score ~ group, data = df_scores)
+`results <- aov(score ~ group, data = df_scores)`
 
 La hipótesis nula, en este caso, es que las tres poblaciones tienen la misma puntuación media en este videojuego. Si rechaza esta hipótesis nula (si el valor p es menor que 0.05), puede decir que está razonablemente seguro de que un par de conjuntos de datos es significativamente diferente. Sin embargo, después de usar solo ANOVA, no puede sacar ninguna conclusión sobre qué dos poblaciones tienen una diferencia significativa.
