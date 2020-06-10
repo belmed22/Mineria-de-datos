@@ -149,7 +149,7 @@ library(package-name)
 Puede buscar documentación para diferentes paquetes disponibles en R en la CRAN (Red Integral de Archivo R).
 
 
-## Learn R: DataFrames
+## Learn R: DataFrames<a name="id2"></a>
 
 ### Introduction to Data Frames in R
 
@@ -348,7 +348,7 @@ df %>%
 
 Puede confirmar que los nombres de las columnas se han actualizado utilizando cualquiera de los nombres de las funciones base R () o colnames (), que toman un marco de datos como argumento y devuelve un vector que contiene los nombres de las columnas.
 
-## Learn R: Data Cleaning
+## Learn R: Data Cleaning<a name="id3"></a>
 
 ### Introduction
 
@@ -452,7 +452,7 @@ str () muestra la estructura interna de un objeto R. Llamar a str () con un marc
 
 A veces necesitamos modificar cadenas en nuestros marcos de datos para ayudarnos a transformarlas en métricas más significativas.
 
-## Learn R: Fundamentals of Data Visualization with ggplot2
+## Learn R: Fundamentals of Data Visualization with ggplot2<a name="id4"></a>
 
 ### Introduction
 
@@ -568,7 +568,7 @@ bar <- ggplot(books, aes(x=Language)) + geom_bar()
 bar
 ggsave("bar-example.png")
 
-## Learn R: Aggregates
+## Learn R: Aggregates<a name="id5"></a>
 
 ### Introduction
 
@@ -654,7 +654,7 @@ group_by () agrupa el marco de datos por curso en dos grupos: learn-r y learn-py
 
 mutate () agregará una nueva columna diff_from_course_mean que se calcula como la diferencia entre el puntaje de prueba individual de una fila y la media (quiz_score) para el grupo (curso) de esa fila
 
-## Learn R: Joining Tables
+## Learn R: Joining Tables<a name="id6"></a>
 
 ### Inner Join I
 
@@ -752,7 +752,7 @@ Si queremos combinar estos dos marcos de datos, podemos usar el siguiente comand
 concatenated_dfs <- df1 %>%
   bind_rows(df_2)
 
-## Learn R: Mean, Median, and Mode
+## Learn R: Mean, Median, and Mode<a name="id7"></a>
 
 ### Calculating Mean
 
@@ -819,7 +819,7 @@ example_data <- c(24, 16, 12, 10, 12, 28, 38, 12, 28, 24)
 example_mode <- Mode(example_data)
 
 
-## Learn R: Variance and Standard Deviation
+## Learn R: Variance and Standard Deviation<a name="id8"></a>
 
 ### Variance
 
@@ -865,7 +865,7 @@ Ahora que nuestras unidades coinciden, nuestra medida de dispersión es más fá
 
 Si tiene un punto de datos que está a más de tres desviaciones estándar de la media, ¡es un dato increíblemente inusual!
 
-## Learn R: Quartiles, Quantiles, and Interquartile Range
+## Learn R: Quartiles, Quantiles, and Interquartile Range<a name="id9"></a>
 
 ### Quartiles
 
@@ -988,7 +988,7 @@ La función IQR () toma un conjunto de datos como parámetro y devuelve el rango
 dataset = c(4, 10, 38, 85, 193)
 interquartile_range = IQR(dataset)
 
-## Learn R: Hypothesis Testing
+## Learn R: Hypothesis Testing<a name="id10"></a>
 
 ### Introduction
 
