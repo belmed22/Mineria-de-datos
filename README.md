@@ -1,7 +1,7 @@
 # Minería-de-datos
 
 ## Bloque-1
-### Learn R: Introduction
+## Learn R: Introduction
 ### Learn R: DataFrames
 ### Learn R: Data Cleaning
 ### Learn R: Fundamentals of Data Visualization with ggplot2
