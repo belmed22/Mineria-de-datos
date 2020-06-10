@@ -1,16 +1,16 @@
 # Minería-de-datos
 
 ## Bloque-1
-### Learn R: Introduction
-### Learn R: DataFrames
-### Learn R: Data Cleaning
-### Learn R: Fundamentals of Data Visualization with ggplot2
-### Learn R: Aggregates
-### Learn R: Joining Tables
-### Learn R: Mean, Median, and Mode
-### Learn R: Variance and Standard Deviation
-### Learn R: Quartiles, Quantiles, and Interquartile Range
-### Learn R: Hypothesis Testing
+### [Learn R: Introduction](#id1)
+### [Learn R: DataFrames](#id2)
+### [Learn R: Data Cleaning](#id3)
+### [Learn R: Fundamentals of Data Visualization with ggplot2](#id4)
+### [Learn R: Aggregates](#id5)
+### [Learn R: Joining Tables](#id6)
+### [Learn R: Mean, Median, and Mode](#id7)
+### [Learn R: Variance and Standard Deviation](#id8)
+### [Learn R: Quartiles, Quantiles, and Interquartile Range](#id9)
+### [Learn R: Hypothesis Testing](#id10)
 
 
 
