@@ -32,12 +32,12 @@ Este formato le permite agrupar bloques de código con lógica común, ver su sa
 Comencemos con la sintaxis básica para los cálculos matemáticos en R. R realiza sumas, restas, multiplicaciones y divisiones con +, -, * y /:
 
 ` #Results in "500"
-573 - 74 + 1
+573 - 74 + 1`
 
-#Results in "50"
-25 * 2
+` #Results in "50"
+25 * 2`
 
-#Results in "2"
+` #Results in "2"
 10 / 5 `
 
 Las operaciones matemáticas en R siguen el orden matemático estándar de operaciones.
