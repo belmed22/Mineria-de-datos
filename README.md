@@ -24,7 +24,7 @@ Nuestro enfoque para enseñarle R será similar a enseñarle cómo usar una nuev
 Verá los bloques envueltos dentro de la siguiente sintaxis:
 This is regular markdown text that will render as regular text.
 
-7 + 7 # This is R code
+`7 + 7 # This is R code`
 
 Este formato le permite agrupar bloques de código con lógica común, ver su salida y luego representarlo todo como un archivo HTML que se puede ver en un navegador como una página web estática. El formato .Rmd es el estándar preferido en la industria de la ciencia de datos.
 
