@@ -18,7 +18,7 @@
 
 ### Why R?
 
-En esta lección, le presentaremos una sintaxis básica de R y discutiremos cómo R clasifica los tipos de datos para que pueda procesarlos matemáticamente en el análisis.
+[En esta leccióntexto a mostrar](#Learn R: Introduction), le presentaremos una sintaxis básica de R y discutiremos cómo R clasifica los tipos de datos para que pueda procesarlos matemáticamente en el análisis.
 Nuestro enfoque para enseñarle R será similar a enseñarle cómo usar una nueva herramienta.
 ¿Para qué es la herramienta? R es poderoso para realizar estadísticas y otros análisis de datos especializados. Fue inventado por científicos para la informática estadística y se ha creado una comunidad de paquetes especializados en torno al lenguaje.
 Verá los bloques envueltos dentro de la siguiente sintaxis:
